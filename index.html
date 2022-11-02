@@ -14,8 +14,8 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Me</a></li>
+                <li><a href="#">My Portfolio</a></li>
                 <li><a href="#">Contact Me</a></li>
-                <li><a href="#">Work</a></li>
             </ul>
         </nav>
         <div class="header-text">
@@ -23,6 +23,7 @@
         </div>
     </div>
 </div>
+<!------About------->
 <div id="about">
     <div class="container">
         <div class="row">
@@ -30,11 +31,58 @@
                 <img src="IMG_3865.JPG">
             </div>
             <div class="about-col-2">
-                <h1>About Me</h1>
-            </div>
+                <h1 class="sub-title">About Me</h1>
+                <p>My name is Ka'Daija Dortch I am 22 years old and im passionate just about everything.
+                    I am a graduate year of 2018 and I got my associate degree in crinimal justice of 2020. 
+                    I currently have two dogs and three lizards hopefully will have more soon. 
+                </p>
+
+               <div class="tab-title">
+                   <p class="tab-links active-link" onclick="opentab('Education')">Education</p>
+                   <p class="tab-links"onclick="opentab('Work')">Work</p>
+               </div>
+               <div class="tab-contents active-tab" id="Education">
+                    <ul>
+                        <li>Graduated High School in 2018</li>
+                        <li>Graduated college in 2020 with associates in crinimal justice.</li>
+                    </ul>
+                </div>
+               <div class="tab-contents active-tab" id="Work">
+                  <ul>
+                     <li>Created a business marketing webpage </li>
+                  </ul>
+               </div>
+           </div>
         </div>
     </div>
 </div>
-    
+<!-----Portfolio----->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work">
+            <img src="img_2.jpg">
+        </div>
+        <div class="work">
+            <img src="">
+        </div>
+</div>
+
+
+ <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+           tablink.classList.remove("active-link"); 
+        }
+        for(tabcontent of tabcontents){
+           tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+ </script>   
+
 </body>
 </html>
